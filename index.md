@@ -7,7 +7,6 @@
   
 ##  Microsoft
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -17,20 +16,20 @@
 
 <h2>Dionysus: 1st, 3rd, 5th, ♭♭7th, 9th</h2>
 <ul>
-  <li>Hunter-gatherer: individual experience <span style="color: indigo;">(I)</span></li>
+  <li><span style="color: indigo;">Hunter-gatherer: individual experience (I)</span></li>
   <li><span style="color: blue;">Peasant</span>: <span style="color: blue;">judeo</span> humanism <span style="color: blue;">(B)</span></li>
 </ul>
 
 <h2>Sing O Muse: 11th, 13th</h2>
 <ul>
-  <li>Farmer: christian <a href="https://www.gutenberg.org/cache/epub/61/pg61-images.html#chap01" style="color: green;">kapital</a> <span style="color: green;">(G)</span></li>
-  <li>Manufacturer: world religions <span style="color: yellow;">(Y)</span></li>
+  <li><a href="https://www.gutenberg.org/cache/epub/61/pg61-images.html#chap01" style="color: green;">Farmer: christian  kapital</a> <span style="color: green;">(G)</span></li>
+  <li><span style="color: yellow;">Manufacturer: world religions (Y)</span></li>
 </ul>
 
 <h2>Apollo: ♯9,♭9,♯11,♭13</h2>
 <ul>
-  <li><a href="https://www.youtube.com/watch?v=uHEPBzYick0" style="color: orange;">Electricity</a>: prophetic utterances <span style="color: orange;">(O)</span></li>
-  <li>Railway: spiritual teachings <span style="color: red;">(R)</span></li>
+  <li><a href="https://www.youtube.com/watch?v=uHEPBzYick0" style="color: orange;">Electricity</a>: <span style="color: orange;">prophetic utterances (O)</span></li>
+  <li><span style="color: red;">Railway: spiritual teachings (R)</span></li>
 </ul>
 
 </body>
