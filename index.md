@@ -9,10 +9,10 @@
 
 ### Dionysus: 1st, 3rd, 5th, ♭♭7th, 9th  
 - Hunter-gatherer: individual experience   (I)
-- `Peasant`: humanism, `judeo` (B)
+- `Peasant`:`judeo` humanism (B)
    
 ### Sing O Muse: 11th, 13th
-- Farmer: christian (G)
+- Farmer: christian [kapital](https://www.gutenberg.org/cache/epub/61/pg61-images.html#chap01) (G)
 - Manufacturer: world religions (Y)
    
 ### Apollo: ♯9,♭9,♯11,♭13 
