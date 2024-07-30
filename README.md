@@ -1,12 +1,3 @@
+<a href="https://book.the-turing-way.org/welcome.html"><img src="https://deadline.com/wp-content/uploads/2021/06/will.jpg?w=681&h=383&crop=1" width="800" align="Right" /></a>
 
-### God: 1st, 3rd, 5th, ♭♭7th, 9th  
-1. Hunter-gatherer: spiritual teachings  (I)
-2. `Peasant`: humanism (B)
-### Community: 11th, 13th
-3. Farmer: `judeo`, christian (G)
-4. Manufacturer: world religions (Y)
-### Individual: ♯9,♭9,♯11,♭13 
-5. [Electricity](https://www.youtube.com/watch?v=uHEPBzYick0): prophetic utterances (O)
-6. Railway: individual experience (R)
-
- 
+# _Willard_
