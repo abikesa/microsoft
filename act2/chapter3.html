@@ -470,8 +470,8 @@ document.write(`
 <span class="c1"># Define the neural network structure</span>
 <span class="k">def</span> <span class="nf">define_layers</span><span class="p">():</span>
     <span class="k">return</span> <span class="p">{</span>
-        <span class="s1">&#39;World&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Cosmos&#39;</span><span class="p">,</span> <span class="s1">&#39;Earth&#39;</span><span class="p">,</span> <span class="s1">&#39;Life&#39;</span><span class="p">,</span> <span class="s1">&#39;Cost&#39;</span><span class="p">,</span> <span class="s1">&#39;Parallel&#39;</span><span class="p">,</span> <span class="s1">&#39;Time&#39;</span><span class="p">],</span>
-        <span class="s1">&#39;Framework&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Cosmology&#39;</span><span class="p">,</span> <span class="s1">&#39;Geology&#39;</span><span class="p">,</span> <span class="s1">&#39;Biology&#39;</span><span class="p">,</span> <span class="s1">&#39;Agency&#39;</span><span class="p">,</span> <span class="s1">&#39;Space&#39;</span><span class="p">,</span> <span class="s1">&#39;Inheritence&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;World&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Cosmos&#39;</span><span class="p">,</span> <span class="s1">&#39;Earth&#39;</span><span class="p">,</span> <span class="s1">&#39;Life&#39;</span><span class="p">,</span> <span class="s1">&#39;Cost&#39;</span><span class="p">,</span> <span class="s1">&#39;Parallel&#39;</span><span class="p">,</span> <span class="s1">&#39;Inheritence&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Framework&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Cosmology&#39;</span><span class="p">,</span> <span class="s1">&#39;Geology&#39;</span><span class="p">,</span> <span class="s1">&#39;Biology&#39;</span><span class="p">,</span> <span class="s1">&#39;Agency&#39;</span><span class="p">,</span> <span class="s1">&#39;Space&#39;</span><span class="p">,</span> <span class="s1">&#39;Time&#39;</span><span class="p">],</span>
         <span class="s1">&#39;Meta&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Divine&#39;</span><span class="p">,</span> <span class="s1">&#39;Red Queen&#39;</span><span class="p">,</span> <span class="s1">&#39;Machine&#39;</span><span class="p">],</span>
         <span class="s1">&#39;Perception&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Perception&#39;</span><span class="p">],</span>
         <span class="s1">&#39;Agency&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Digital-Twin&#39;</span><span class="p">,</span> <span class="s1">&#39;Enterprise&#39;</span><span class="p">],</span>
@@ -483,7 +483,7 @@ document.write(`
 <span class="k">def</span> <span class="nf">assign_colors</span><span class="p">():</span>
     <span class="n">color_map</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s1">&#39;yellow&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Perception&#39;</span><span class="p">],</span>
-        <span class="s1">&#39;paleturquoise&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">,</span> <span class="s1">&#39;Inheritence&#39;</span><span class="p">,</span> <span class="s1">&#39;Enterprise&#39;</span><span class="p">,</span> <span class="s1">&#39;Commensalism&#39;</span><span class="p">,</span> <span class="s1">&#39;Defense&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;paleturquoise&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Inheritence&#39;</span><span class="p">,</span> <span class="s1">&#39;Time&#39;</span><span class="p">,</span> <span class="s1">&#39;Enterprise&#39;</span><span class="p">,</span> <span class="s1">&#39;Commensalism&#39;</span><span class="p">,</span> <span class="s1">&#39;Defense&#39;</span><span class="p">],</span>
         <span class="s1">&#39;lightgreen&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Parallel&#39;</span><span class="p">,</span> <span class="s1">&#39;Machine&#39;</span><span class="p">,</span> <span class="s1">&#39;Mutualism&#39;</span><span class="p">,</span> <span class="s1">&#39;Immunity&#39;</span><span class="p">,</span> <span class="s1">&#39;Retreat&#39;</span><span class="p">,</span> <span class="s1">&#39;Lethality&#39;</span><span class="p">,</span> <span class="s1">&#39;Space&#39;</span><span class="p">],</span>
         <span class="s1">&#39;lightsalmon&#39;</span><span class="p">:</span> <span class="p">[</span>
             <span class="s1">&#39;Cost&#39;</span><span class="p">,</span> <span class="s1">&#39;Life&#39;</span><span class="p">,</span> <span class="s1">&#39;Digital-Twin&#39;</span><span class="p">,</span>
@@ -496,22 +496,27 @@ document.write(`
 <span class="k">def</span> <span class="nf">define_connections</span><span class="p">():</span>
     <span class="k">return</span> <span class="p">{</span>
         <span class="s1">&#39;World&#39;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s1">&#39;Cosmos&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Cosmology&#39;</span><span class="p">,</span> <span class="s1">&#39;Space&#39;</span><span class="p">],</span>
-            <span class="s1">&#39;Earth&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Geology&#39;</span><span class="p">,</span> <span class="s1">&#39;Biology&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;Cosmos&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Cosmology&#39;</span><span class="p">,</span> <span class="s1">&#39;Geology&#39;</span><span class="p">,</span> <span class="s1">&#39;Biology&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;Earth&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Geology&#39;</span><span class="p">,</span> <span class="s1">&#39;Biology&#39;</span><span class="p">,</span> <span class="s1">&#39;Agency&#39;</span><span class="p">,</span> <span class="s1">&#39;Space&#39;</span><span class="p">,</span> <span class="s1">&#39;Time&#39;</span><span class="p">],</span>
             <span class="s1">&#39;Life&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Biology&#39;</span><span class="p">,</span> <span class="s1">&#39;Agency&#39;</span><span class="p">],</span>
-            <span class="s1">&#39;Cost&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Agency&#39;</span><span class="p">,</span> <span class="s1">&#39;Time&#39;</span><span class="p">],</span>
-            <span class="s1">&#39;Parallel&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Space&#39;</span><span class="p">,</span> <span class="s1">&#39;Time&#39;</span><span class="p">],</span>
-            <span class="s1">&#39;Time&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Inheritence&#39;</span><span class="p">,</span> <span class="s1">&#39;Machine&#39;</span><span class="p">]</span>
+            <span class="s1">&#39;Cost&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Agency&#39;</span><span class="p">,</span> <span class="s1">&#39;Inheritence&#39;</span><span class="p">,</span> <span class="s1">&#39;Space&#39;</span><span class="p">,</span> <span class="s1">&#39;Time&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;Parallel&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Space&#39;</span><span class="p">,</span> <span class="s1">&#39;Inheritence&#39;</span><span class="p">,</span> <span class="s1">&#39;Time&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;Inheritence&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">,</span> <span class="s1">&#39;Machine&#39;</span><span class="p">,</span> <span class="s1">&#39;Space&#39;</span><span class="p">,</span> <span class="s1">&#39;Agency&#39;</span><span class="p">]</span>
         <span class="p">},</span>
         <span class="s1">&#39;Framework&#39;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s1">&#39;Cosmology&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Divine&#39;</span><span class="p">,</span> <span class="s1">&#39;Red Queen&#39;</span><span class="p">],</span>
             <span class="s1">&#39;Geology&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Red Queen&#39;</span><span class="p">,</span> <span class="s1">&#39;Machine&#39;</span><span class="p">],</span>
-            <span class="s1">&#39;Biology&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Machine&#39;</span><span class="p">,</span> <span class="s1">&#39;Agency&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;Biology&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Machine&#39;</span><span class="p">,</span> <span class="s1">&#39;Agency&#39;</span><span class="p">,</span> <span class="s1">&#39;Red Queen&#39;</span><span class="p">],</span>
             <span class="s1">&#39;Agency&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Divine&#39;</span><span class="p">,</span> <span class="s1">&#39;Red Queen&#39;</span><span class="p">,</span> <span class="s1">&#39;Machine&#39;</span><span class="p">],</span>
             <span class="s1">&#39;Space&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Divine&#39;</span><span class="p">,</span> <span class="s1">&#39;Machine&#39;</span><span class="p">],</span>
             <span class="s1">&#39;Time&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Machine&#39;</span><span class="p">,</span> <span class="s1">&#39;Red Queen&#39;</span><span class="p">]</span>
         <span class="p">},</span>
-        <span class="c1"># Other layers can default to fully connected</span>
+        <span class="s1">&#39;Meta&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;Divine&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Perception&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;Red Queen&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Perception&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;Machine&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Perception&#39;</span><span class="p">]</span>
+        <span class="p">},</span>
+        <span class="c1"># Other layers default to fully connected if not specified</span>
     <span class="p">}</span>
 
 <span class="c1"># Calculate positions for nodes</span>
@@ -569,7 +574,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/ff9d3531c16b7f49f30d0ddfb9d42d20634e9bd3cd20a6007f3e33365871d851.png" src="../_images/ff9d3531c16b7f49f30d0ddfb9d42d20634e9bd3cd20a6007f3e33365871d851.png" />
+<img alt="../_images/661edf4de50835db8b67c8024ef43061cb285b2f2ba510653e71935b3309f174.png" src="../_images/661edf4de50835db8b67c8024ef43061cb285b2f2ba510653e71935b3309f174.png" />
 </div>
 </div>
 <figure class="align-default" id="id4">
