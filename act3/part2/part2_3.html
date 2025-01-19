@@ -380,7 +380,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -396,6 +398,19 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pruning-in-neural-networks-purpose-and-concept">Pruning in Neural Networks: Purpose and Concept</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pruning-weights"><strong>Pruning Weights</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pruning-nodes"><strong>Pruning Nodes</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-pruning-decisions-are-made"><strong>How Pruning Decisions Are Made</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#benefits-of-pruning"><strong>Benefits of Pruning</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-not-just-zero-weights-instead-of-removing-nodes"><strong>Why Not Just Zero Weights Instead of Removing Nodes?</strong></a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -407,6 +422,60 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="attribute">
 <span id="id1"></span><h1>Attribute<a class="headerlink" href="#attribute" title="Permalink to this heading">#</a></h1>
+<p>Yes, the term <strong>pruning</strong> in neural network training is indeed borrowed from the concept of pruning tree branches. It’s an evocative metaphor for simplifying a complex structure to make it more efficient while preserving its core function. Let’s delve into the technical aspects of pruning and its implications for edges, weights, and nodes:</p>
+<section id="pruning-in-neural-networks-purpose-and-concept">
+<h2>Pruning in Neural Networks: Purpose and Concept<a class="headerlink" href="#pruning-in-neural-networks-purpose-and-concept" title="Permalink to this heading">#</a></h2>
+<p>Pruning in neural networks refers to the process of reducing the size of the network by removing unnecessary components—typically weights (connections) or even entire nodes (neurons). The goal is to create a smaller, more efficient model that still performs well on its task. This is akin to pruning branches on a tree to focus the plant’s energy on essential growth and yield. In neural networks, pruning eliminates redundancy and overfitting, improves computational efficiency, and allows the model to generalize better.</p>
+<hr class="docutils" />
+</section>
+<section id="pruning-weights">
+<h2><strong>Pruning Weights</strong><a class="headerlink" href="#pruning-weights" title="Permalink to this heading">#</a></h2>
+<p>The most common form of pruning involves <strong>edges</strong>—the connections between nodes. These connections are associated with weights, which indicate the strength of the influence a node has on another. During pruning:</p>
+<ol class="arabic simple">
+<li><p><strong>Zeroing Weights</strong>: Weights that are deemed insignificant (e.g., close to zero) are set to exactly zero. This essentially means the connection is inactive but still present in the model.</p></li>
+<li><p><strong>Removing Edges</strong>: Instead of setting the weight to zero, some pruning techniques physically remove the edge from the network graph, reducing the number of parameters.</p></li>
+</ol>
+<p>While zeroing weights achieves the same functional outcome as removing edges, physically removing them leads to a more compact model, reducing memory and computational requirements.</p>
+<hr class="docutils" />
+</section>
+<section id="pruning-nodes">
+<h2><strong>Pruning Nodes</strong><a class="headerlink" href="#pruning-nodes" title="Permalink to this heading">#</a></h2>
+<p>Pruning can also extend to <strong>nodes</strong> (neurons). If a node’s connections to other neurons are all pruned (or its output has negligible impact), the node itself may be removed. However, this is less common than edge pruning because:</p>
+<ul class="simple">
+<li><p>Removing nodes risks disrupting the overall architecture of the network.</p></li>
+<li><p>A node may have latent potential for future tasks, and its removal could limit the model’s adaptability.</p></li>
+</ul>
+<p>Instead of removing nodes, it’s often preferable to deactivate them temporarily (via zeroing weights) so they can be reactivated during retraining if necessary. This approach provides flexibility without the irreversible loss of information.</p>
+<hr class="docutils" />
+</section>
+<section id="how-pruning-decisions-are-made">
+<h2><strong>How Pruning Decisions Are Made</strong><a class="headerlink" href="#how-pruning-decisions-are-made" title="Permalink to this heading">#</a></h2>
+<p>The decision to prune weights or nodes is based on <strong>importance scores</strong>, which measure how much a weight or node contributes to the network’s performance. Some methods for pruning include:</p>
+<ol class="arabic simple">
+<li><p><strong>Magnitude-Based Pruning</strong>: Connections with the smallest absolute weights are removed or zeroed out, under the assumption that they contribute the least.</p></li>
+<li><p><strong>Gradient-Based Pruning</strong>: Weights with the smallest gradients (i.e., those least adjusted during training) are pruned, as they have minimal influence on the loss function.</p></li>
+<li><p><strong>Structured Pruning</strong>: Removes entire blocks of weights or filters, such as those corresponding to a specific layer or neuron.</p></li>
+</ol>
+<hr class="docutils" />
+</section>
+<section id="benefits-of-pruning">
+<h2><strong>Benefits of Pruning</strong><a class="headerlink" href="#benefits-of-pruning" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Reduced Overfitting</strong>: By eliminating redundant connections, the model is less likely to memorize noise in the data.</p></li>
+<li><p><strong>Improved Efficiency</strong>: A pruned network is faster to train and deploy, consuming less memory and computational power.</p></li>
+<li><p><strong>Model Compression</strong>: Pruned models are smaller, making them easier to store and share.</p></li>
+</ol>
+<hr class="docutils" />
+</section>
+<section id="why-not-just-zero-weights-instead-of-removing-nodes">
+<h2><strong>Why Not Just Zero Weights Instead of Removing Nodes?</strong><a class="headerlink" href="#why-not-just-zero-weights-instead-of-removing-nodes" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Memory and Computation</strong>: Zeroed weights still occupy memory and computational resources, whereas removed connections or nodes physically reduce the network’s size.</p></li>
+<li><p><strong>Inference Efficiency</strong>: For deployment, a network with zeroed weights may still require the same number of calculations, while a pruned network is inherently simpler and faster.</p></li>
+<li><p><strong>Model Interpretability</strong>: Pruning clarifies the structure of the network by removing unnecessary components, making the model easier to analyze.</p></li>
+</ol>
+<hr class="docutils" />
+<p>In summary, pruning simplifies a neural network by reducing weights and, occasionally, nodes. It’s a deliberate trade-off between retaining performance and optimizing efficiency. While zeroing weights is less aggressive and preserves flexibility, removing nodes or edges outright achieves a leaner, more computationally efficient network. The key is to balance pruning with preserving the network’s capacity for generalization and adaptability, much like ensuring a pruned tree remains healthy and productive.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -538,6 +607,7 @@ document.write(`
 </figcaption>
 </figure>
 </section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -593,6 +663,26 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pruning-in-neural-networks-purpose-and-concept">Pruning in Neural Networks: Purpose and Concept</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pruning-weights"><strong>Pruning Weights</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pruning-nodes"><strong>Pruning Nodes</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-pruning-decisions-are-made"><strong>How Pruning Decisions Are Made</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#benefits-of-pruning"><strong>Benefits of Pruning</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-not-just-zero-weights-instead-of-removing-nodes"><strong>Why Not Just Zero Weights Instead of Removing Nodes?</strong></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
